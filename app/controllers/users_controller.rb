@@ -30,6 +30,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    if request.xhr?
+      render :layout => false
+    end
   end
 
   def destroy
