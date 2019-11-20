@@ -50,6 +50,10 @@ GEM
     execjs (2.7.0)
     faker (1.1.2)
       i18n (~> 0.5)
+    handlebars_assets (0.23.6)
+      execjs (~> 2.0)
+      sprockets (>= 2.0.0)
+      tilt (>= 1.2)
     hike (1.2.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -162,6 +166,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
   faker (= 1.1.2)
+  handlebars_assets
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   pg (= 0.15.1)

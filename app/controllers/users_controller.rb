@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    #we will send back only json to test our handle bar template. Cooment th line below and we will be rendering erb view again.
+    render json: @user
   end
   def new
     @user=User.new

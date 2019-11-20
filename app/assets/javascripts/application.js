@@ -14,5 +14,15 @@
 //= require jquery_ujs
 //= require jquery.pjax
 //= require turbolinks
+//= require handlebars
 //= require_tree .
-$(document).pjax('a', '#data-pjax-container')
+$(document).pjax('.pjax-link', '#data-pjax-container') //All links with class pjax-link will be pjaxified
+$(document).ready(function(){
+    $('.btn-show-user').on ('ajax:success', showUser);
+function showUser(event,data){
+    var userHTML = HandlebarsTemplates['user']({ 
+        user: data 
+      });
+      $('.ajax-container').html(userHTML);
+    }
+});
